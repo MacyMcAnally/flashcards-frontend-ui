@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import HomePage from './components/pages/HomePage';
+import Header from './components/Header'
+import LoginPage from './components/pages/LoginPage';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NewUserPage from './components/pages/NewUserPage';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Flashcards!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Macy said Hello World!
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <LoginPage exact path='/Login' component={LoginPage} />
+          <NewUserPage exact path='/NewUser' component={NewUserPage} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

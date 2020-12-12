@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+  </head>
+
+  <body>
+    <div id="card-container"><div>
+    <div id="inputs-container"></div>
+    <button onclick="createCard()">create card</button>
+
+    <script>
+        const frontTemplate = `
+            <div>
+                <div style="background-color:red; color: blue;height:150px; width: 150px;text-align:center">
+                  %%FRONT%%
+                </div>
+            </div>
+        `;
+        const backTemplate = `
+            <div>%%BACK%%</div>
+        `;
+        const card = {
+            FRONT: 'Whats the capital of Texas?',
+            BACK: 'Austin'
+        };
+        let renderedFront = frontTemplate;
+        let renderedBack = backTemplate;
+        
+        for (k in card) {
+            const frontNeedle = `%%${k}%%`;
+            const backNeedle = `%%${k}%%`;
+            renderedFront = renderedFront.replaceAll(frontNeedle, card[k]);
+            renderedBack = renderedBack.replaceAll(backNeedle, card[k]);
+        }
+
+
+        document.getElementById('card-container').innerHTML = renderedFront;
+    
+
+        console.log(JSON.stringify(card));
+    </script>
+  </body>
+</html>
