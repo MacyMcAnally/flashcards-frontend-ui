@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from '../Header';
-function ViewCards() {
+
+function UserInfo() {
     return (
         <>
             <Header />
-        <h1>This is ViewCards Page!</h1>
+        <h1>This is UserInfo Page!</h1>
         </>
     )
 }
 
-export default ViewCards;
+export default UserInfo;
