@@ -1,7 +1,7 @@
 import { cards, cardTemplates, users, lastcardid, lastcardtemplateid, lastuserid, newUser}
     from './db';
 
-let currentUser = undefined;
+let currentUser = users[1];
 
 export async function getCards() {
     if (!currentUser) {
@@ -10,7 +10,7 @@ export async function getCards() {
 
     const thisUsersTemplates = cardTemplates.filter(t => {
         return t.userID == currentUser.id;
-    });
+    }).map(t => t.id);
 
     return cards.filter(t => {
         return thisUsersTemplates.indexOf(t.templateID) !== -1;
@@ -31,11 +31,13 @@ export async function editCard(t) {
 }
 
 // see cardtemplateinrequest.java
-export async function createCard(t) {
-    cards.add({
-        ...t,
-        id: ++lastcardid
-    });
+export async function createCard(templateID, data) {
+    const c = {
+        id: ++lastcardid,
+        templateID: templateID,
+        data: data
+    };
+    cards.push(c);
 }
 
 
@@ -46,10 +48,6 @@ export async function getCardTemplates() {
 
     return cardTemplates.filter(t => {
         return t.userID === currentUser.id;
-        console.log(cardTemplates);
-
-        const result = getCardTemplates();
-        console.log(result);
     });
 }
 
@@ -70,12 +68,12 @@ export async function editCardTemplate(t) {
 export async function createCardTemplate(description, front, back) {
     const t = {
         id: ++lastcardtemplateid,
-        userID: 2,
+        userID: currentUser.id,
         description: description,
         front: front,
         back: back
     };
-    createCardTemplate.push(t);
+    cardTemplates.push(t);
 }
 
 export function getCurrentUser() {

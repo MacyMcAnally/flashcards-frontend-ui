@@ -40,3 +40,15 @@
 body {
   text-align: center;
 }
+
+.card-component div {
+  width: 500px;
+  height: 300px;
+  background-color: #FFFAF0;
+  color: rgb(31, 45, 61);
+  text-align: center;
+  padding: 8px;
+  margin: 8px;
+  display: table-cell;
+  vertical-align: middle;
+}

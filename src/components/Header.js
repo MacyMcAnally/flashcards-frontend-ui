@@ -12,6 +12,7 @@ const Header = () => {
     const InnerPagesBtnEnable = 
         (loc ==='/ui/UserHome') ||
         (loc ==='/ui/ViewCards') ||
+        (loc ==='/ui/CreateTemp') ||
         (loc ==='/ui/CreateCards') ||
         (loc ==='/ui/UserInfo');
 
@@ -35,6 +36,8 @@ const Header = () => {
                             <NavLink exact to='/ui/UserHome' activeClassName='selected'>UserHome</NavLink>
                             <span> </span>
                             <NavLink exact to='/ui/ViewCards' activeClassName='selected'>View Cards</NavLink>
+                            <span> </span>
+                            <NavLink exact to='/ui/CreateTemp' activeClassName='selected'>Create Template</NavLink>
                             <span> </span>
                             <NavLink exact to='/ui/CreateCards' activeClassName='selected'>Create New Cards</NavLink>
                             <span> </span>

@@ -19,8 +19,8 @@ module.exports = {
             id: 1,
             userID: 2,
             description: 'this template is for X',
-            front: '<div>%%FRONT%%</div>',
-            back: '<div style="background-color:red">%%BACK%%</div>',
+            front: '<div>what is the capitol of %%STATE%%</div>',
+            back: '<div style="background-color:red">%%CAPITOL%%</div>',
         },
         {
             id: 2,
@@ -36,17 +36,17 @@ module.exports = {
         {
             id: 1,
             templateID: 1,
-            data: "",
+            data: '{"STATE":"California","CAPITOL":"Sacramento"}',
         },
         {
             id: 2,
             templateID: 1,
-            data: "",
+            data: '{"STATE":"Texas","CAPITOL":"Austin"}',
         },
         {
             id: 3,
             templateID: 2,
-            data: "",
+            data: '{"FRONT":"1","BACK":"2"}',
         }
     ],
     lastcardid: 3

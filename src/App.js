@@ -7,6 +7,7 @@ import UserHomePage from './components/UserWPass/UserHomePage';
 import UserNotFound from './components/pages/UserNotFound';
 import ViewCards from './components/UserWPass/ViewCards';
 import CreateCards from './components/UserWPass/CreateCards';
+import CreateCardTemp from './components/UserWPass/CreateCardTemp';
 import UserInfo from './components/UserWPass/UserInfo';
 
 
@@ -24,6 +25,7 @@ function App() {
           <UserNotFound exact path='/ui/UserError' component={UserNotFound} />
           <UserHomePage exact path='/ui/UserHome' component={UserHomePage} />
           <ViewCards exact path='/ui/ViewCards' component={ViewCards} />
+          <CreateCardTemp exact path='/ui/CreateTemp' component={CreateCardTemp} />
           <CreateCards exact path='/ui/CreateCards' component={CreateCards} />
           <UserInfo exact path='/ui/UserInfo' component={UserInfo} />
           { /* <ViewCardsComponent cards={state.cards}/>*/ }
