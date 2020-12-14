@@ -1,7 +1,10 @@
 import { cards, cardTemplates, users, lastcardid, lastcardtemplateid, lastuserid, newUser}
     from './db';
+import Cookies from 'js-cookie';
+import jwt_decode from 'jwt-decode';
+import Axios from 'axios';
 
-let currentUser = users[1];
+let currentUser = undefined;
 
 export async function getCards() {
     if (!currentUser) {
@@ -76,20 +79,22 @@ export async function createCardTemplate(description, front, back) {
     cardTemplates.push(t);
 }
 
-export function getCurrentUser() {
-    return currentUser;
+function geturl(path) {
+    return `http://18.221.157.116:8080/ui${path}`;
 }
 
 export async function login(username, password) {
-    for (let i = 0; i < users.length; i++) {
-        const u = users[i];
-        if (u.username == username && u._password == password) {
-            currentUser = u;
-            return;
-        }
-    }
+    const resp = await Axios.post(geturl('/login'), {
+        username: username,
+        password: password
+    });
+    const jwt = resp.data;
 
-    throw new Error('couldnt login!');
+    console.log(jwt_decode(jwt));
+    //set current user. let it have id/admin fields
+
+
+    
 }
 
 
