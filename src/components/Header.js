@@ -5,16 +5,16 @@ const Header = () => {
     const loc = window.location.pathname;
 
     const OuterPagesBtnEnable =
-        (loc === '/ui') ||
-        (loc === '/ui/Login') ||
-        (loc === '/ui/NewUser');
+        (loc === '/ui') || (loc === '/ui/') ||
+        (loc === '/ui/Login') || (loc === '/ui/Login/') ||
+        (loc === '/ui/NewUser') || (loc === '/ui/NewUser/');
 
     const InnerPagesBtnEnable =
-        (loc === '/ui/UserHome') ||
-        (loc === '/ui/ViewCards') ||
-        (loc === '/ui/CreateTemp') ||
-        (loc === '/ui/CreateCards') ||
-        (loc === '/ui/UserInfo');
+        (loc === '/ui/UserHome') || (loc === '/ui/UserHome/') ||
+        (loc === '/ui/ViewCards') || (loc === '/ui/ViewCards/') ||
+        (loc === '/ui/CreateTemp') || (loc === '/ui/CreateTemp/') ||
+        (loc === '/ui/CreateCards') || (loc === '/ui/CreateCards/');
+
 
     return (
         <header style={headerStyle}>
