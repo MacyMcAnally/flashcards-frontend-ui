@@ -113,7 +113,7 @@ class CreateCards extends React.Component {
             <>
                 <Header />
                 <div>
-                    <h1>This is CreateCards Page!</h1>
+                    <h1 id="CAC">Create A New Cards</h1>
                     {
                         this.state.templates.length > 0 ?
                             (
@@ -133,11 +133,14 @@ class CreateCards extends React.Component {
                     <br></br>
                     {
                         fields.map((field, index) => {
+                            <span> </span>
                             return (<input key={index} name={field} value={this.state.cardData[field] || ''} placeholder={field} onChange={this.handleChange}></input>);
+                            <br></br>
                         })
                     }
+                    <span> </span>
                     <button onClick={this.createANewCard}>Create</button>
-                    <CardComponent html={this.getCardFrontHtml()} />
+                   <span> </span><CardComponent html={this.getCardFrontHtml()} />
                     <CardComponent html={this.getCardBackHtml()} />
                 </div>
             </>

@@ -16,7 +16,7 @@ const Header = () => {
         (loc === '/ui/CreateCards') || (loc === '/ui/CreateCards/');
 
 
-    return (
+return (
         <header style={headerStyle}>
                 <h1 >Flashcards!</h1>
                 {
@@ -52,7 +52,12 @@ const headerStyle = {
     background: '#E0FFFF',
     color: '#2F4F4F',
     textAlign: 'center',
-    padding: '10px 10px '
+    padding: '10px 10px ',
+    fontFamily: 'serif',
+    fontWeight: '100',
+    fontStyle: 'oblique',
+    fontSize: '20px',
+    
 
 }
 

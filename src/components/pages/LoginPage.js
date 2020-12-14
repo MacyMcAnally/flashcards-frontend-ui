@@ -33,7 +33,7 @@ function LoginPage() {
         <>
             <Header/>
         <header>
-            <h1>Login</h1>
+            <h1 id='L'>Login</h1>
             <form onSubmit={doLogin}>
                 <input
                     type='text'

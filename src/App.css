@@ -2,17 +2,60 @@
 .card-component div {
   width: 500px;
   height: 300px;
-  background-color: #FFFAF0;
+  background-color: mistyrose;
   color: rgb(31, 45, 61);
-  text-align: center;
   padding: 8px;
-  margin: 8px;
-  display: table-cell;
-  vertical-align: middle;
-  box-sizing: border-box;
+  margin: 8px 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
   
+
 }
 
 body {
   text-align: center;
+}
+
+#CAC {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+#VC {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+#CANCT {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+#UH {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+#CANU {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+#L {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+#WF {
+  font-family: serif;
+  font-weight: 100;
+  font-style: oblique;
 }

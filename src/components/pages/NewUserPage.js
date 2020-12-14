@@ -31,9 +31,9 @@ function NewUserPage() {
         <>
             <Header />
         <header>
-            <h1>Create a New User</h1>
+            <h1 id='CANU'>Create A New User</h1>
             <form onSubmit={createNewUser}>
-                <p>Please enter your Username</p>
+                <p>Please enter your Username: </p>
                 <input
                     type='text'
                     name='username'
@@ -43,7 +43,7 @@ function NewUserPage() {
                 />
                 <br>
                 </br>
-                <p>Please enter your Password</p>
+                <p>Please enter your Password: </p>
                 <input
                     type='text'
                     name='password'

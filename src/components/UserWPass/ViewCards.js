@@ -84,9 +84,11 @@ class ViewCards extends Component {
             <>
                 <Header />
                 <div>
-                    <h1>This is the ViewCards page</h1>
+                    <h1 id="VC">View Cards</h1>
                     <span style={{paddingRight: 8}}>Card #{this.state.cardIndex + 1}</span>
+                    <span> </span>
                     <button onClick={this.flipCard}>Flip</button>
+                    <span> </span>
                     <button onClick={this.goToPreviousCard}>Previous</button>
                     <span> </span>
                     <button onClick={this.goToNextCard}>Next</button>

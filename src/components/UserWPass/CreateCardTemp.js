@@ -27,13 +27,16 @@ function CreateCardTemp() {
     return (
         <>
             <Header />
-            <h1>Welcome to User CreateCardTemp!</h1>
+            <h1 id="CANCT">Create A NEW Card Tempelate</h1>
             <form onSubmit={onCreateCardTemplate}>
-                <p>Please eneter a descrption for this card template</p>
+                <p>Please eneter a descrption for this card template: </p>
                 <br></br>
                 <input type="text" name="description" value={formData["description"]} onChange={handleChange}></input>
+                <span></span>
+                <br></br>
+                <br></br>
                 <textarea id="Input HTML-F" name="front" rows="10" cols="80" value={formData["front"]} onChange={handleChange}></textarea>
-                <span> </span>
+                <span> </span> <span> </span>
                 <textarea id="Input HTML-B" name="back" rows="10" cols="80" value={formData["back"]} onChange={handleChange}></textarea>
                 <br></br>
                 <input type="submit" value="Submit"></input>
