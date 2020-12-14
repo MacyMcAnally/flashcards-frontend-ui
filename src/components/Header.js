@@ -8,17 +8,17 @@ const Header = () => {
         (loc === '/ui') ||
         (loc === '/ui/Login') ||
         (loc === '/ui/NewUser');
-    
-    const InnerPagesBtnEnable = 
-        (loc ==='/ui/UserHome') ||
-        (loc ==='/ui/ViewCards') ||
-        (loc ==='/ui/CreateTemp') ||
-        (loc ==='/ui/CreateCards') ||
-        (loc ==='/ui/UserInfo');
+
+    const InnerPagesBtnEnable =
+        (loc === '/ui/UserHome') ||
+        (loc === '/ui/ViewCards') ||
+        (loc === '/ui/CreateTemp') ||
+        (loc === '/ui/CreateCards') ||
+        (loc === '/ui/UserInfo');
 
     return (
         <header style={headerStyle}>
-            <h1>Flashcards!</h1>
+                <h1 >Flashcards!</h1>
                 {
                     OuterPagesBtnEnable && (
                         <nav>
@@ -26,7 +26,7 @@ const Header = () => {
                             <span> </span>
                             <NavLink exact to='/ui/Login' activeClassName='selected'>Login</NavLink>
                             <span> </span>
-                            <NavLink exact to='/ui/NewUser' activeClassName='selected'>Create User</NavLink>
+                            <NavLink exact to='/ui/NewUser' activeClassName='selected'>Create User</NavLink> 
                         </nav>
                     )
                 }
@@ -40,22 +40,21 @@ const Header = () => {
                             <NavLink exact to='/ui/CreateTemp' activeClassName='selected'>Create Template</NavLink>
                             <span> </span>
                             <NavLink exact to='/ui/CreateCards' activeClassName='selected'>Create New Cards</NavLink>
-                            <span> </span>
-                            <NavLink exact to='/ui/UserInfo' activeClassName='selected'>User Info</NavLink>
                         </nav>
                     )
-                }
-
+                    }
         </header>
     )
 }
 
 const headerStyle = {
-    display: 'flex',
+    display: 'block',
     background: '#E0FFFF',
     color: '#2F4F4F',
-    textAlign: 'left',
-    padding: '3px 15px'
+    textAlign: 'center',
+    padding: '10px 10px '
+
 }
+
 
 export default Header;

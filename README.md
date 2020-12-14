@@ -3,3 +3,12 @@
 
 ## flashcards-frontend-ui
 description..
+
+
+tomcat is hosting our webapp on 8080
+
+we'll actually request our webapp from some other process running on 3000
+this process will map all front end routes like /ui, /ui/Login to /ui
+and forward the request to tomcat on 8080.
+
+we'll fix cors by making this proxy a nodejs express server.

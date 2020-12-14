@@ -92,7 +92,7 @@ class ViewCards extends Component {
                     <button onClick={this.goToNextCard}>Next</button>
                     {
                         this.state.allCards.length &&
-                        (<CardComponent html={this.displayCard()} />)
+                        (<CardComponent style={{display: 'center'}} html={this.displayCard()} />)
                     }
                 </div>
             </>
