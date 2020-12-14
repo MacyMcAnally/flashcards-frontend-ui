@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { createCardTemplate } from '../../api/api';
-import { cardTemplates } from '../../api/db';
 import Header from '../Header';
 import CardComponent from './CardComponent';
 
@@ -16,8 +15,6 @@ function CreateCardTemp() {
         e.preventDefault();
         try {
             await createCardTemplate(formData.description, formData.front, formData.back);
-            console.log(formData);
-            console.log(cardTemplates)
         } catch (e) {
             console.log(e);
         }

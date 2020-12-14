@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { createCardTemplate, getCardTemplates, createCard } from '../../api/api';
-import { cards } from '../../api/db';
 import Header from '../Header';
 import CardComponent from './CardComponent';
 
@@ -99,7 +98,6 @@ class CreateCards extends React.Component {
         const x = JSON.stringify(this.state.cardData);
         const template = this.state.templates[this.state.chosenTemplate]
         await createCard(template.id, x);
-        console.log(cards);
     }
 
     /*
