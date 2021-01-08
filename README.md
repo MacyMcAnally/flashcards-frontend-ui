@@ -27,4 +27,5 @@ To-do list:
 
 ## Getting Started
   ```
-  git clone 
+  git clone {HTTP links}
+  ```
