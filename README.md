@@ -26,4 +26,5 @@ To-do list:
 - Allow user to update password within the user homepage
 
 ## Getting Started
-  ```git clone 
+  ```
+  git clone 
