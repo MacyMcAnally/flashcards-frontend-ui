@@ -37,5 +37,3 @@ npm insatll
 npm start
 ```
 
-## Backend Repo
-https://github.com/2011JavaReact/flashcards
