@@ -26,6 +26,13 @@ To-do list:
 - Allow user to update password within the user homepage
 
 ## Getting Started
+In order to use this application, first, you will need to use the following command:
   ```
   git clone {HTTP links}
   ```
+## Usage
+Open the cloned repository in the IDE by using the following command:
+```
+npm insatll
+npm start
+```
